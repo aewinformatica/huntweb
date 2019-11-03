@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import api from "../../services/api";
+import {Link} from "react-router-dom";
 import "./styles.css";
 
 export default class Main extends Component {
@@ -62,12 +63,12 @@ export default class Main extends Component {
           <article key={product._id}>
             <strong>{product.title}</strong>
             <p>{product.description}</p>
-            
-            <a href="">Acessar</a>
+            {/* Link substituiu o <a> e o href pelo to e usando template literals para passar o parametro*/}
+            <Link to={`/products/${product._id}`}>Acessar</Link>
           </article>
         ))}
         <div className="actions">
-          condicao pra desabilitar o botao
+          {/* condicao pra desabilitar o botao */}
           <button disabled={page === 1} onClick={this.prevPage}>Anterior</button>
           <button disabled={page === productInfo.pages}onClick={this.nextPage}>Próxima</button>
         </div>
