@@ -31,7 +31,7 @@ export default class Main extends Component {
 
   prevPage = () =>{
     // pegando os valores do state
-    const {page,...productInfo} = this.state;
+    const { page } = this.state;
 
     //se estiver na primeira pagina nao faz nada
     if(page === 1) return;
