@@ -13,7 +13,7 @@ const Routes  = () => (
 <Switch>
      {/* o path e o componente| usa se exact para abrir a primeira rota apenas se estive com /*/}
     <Route exact path="/" component= {Main} />
-    {/* usa : para reber parametros */}
+    {/* usa : para receber parametros */}
     <Route path="/products/:id" component= {Product} />
 </Switch>
 </BrowserRouter>
